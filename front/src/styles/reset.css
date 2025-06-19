@@ -1,0 +1,75 @@
+/*
+  RESET CSS CONCISO PARA NEXT.JS
+  -----------------------------------
+  Este reset se enfoca en los elementos más comunes, estableciendo
+  un box-sizing uniforme, eliminando márgenes y paddings predeterminados,
+  y aplicando estilos básicos de tipografía y medios.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+  margin: 0;             /* Elimina los márgenes predeterminados */
+  padding: 0;            /* Elimina los paddings predeterminados */
+}
+
+html, body {
+  height: 100%; /* Asegura que html y body ocupen el 100% de la altura de la ventana */
+  font-family: sans-serif; /* Define una fuente sans-serif genérica como base */
+  -webkit-font-smoothing: antialiased; /* Suavizado de fuentes para Webkit (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Suavizado de fuentes para Firefox en macOS */
+  line-height: 1.5; /* Establece una altura de línea base para mejor legibilidad */
+}
+
+body {
+  background-color: #fff; /* Fondo blanco por defecto (puedes cambiarlo) */
+  color: #000;            /* Color de texto negro por defecto (puedes cambiarlo) */
+}
+
+/*
+  Medios y elementos SVG:
+  - display: block: Elimina el espacio extra debajo de las imágenes (común con display: inline).
+  - max-width: 100%: Asegura que las imágenes y otros medios no desborden su contenedor,
+                    haciéndolos responsivos.
+  - height: auto: Mantiene la proporción de aspecto al escalar.
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto; /* Importante para mantener la proporción de aspecto */
+}
+
+/*
+  Elementos de formulario:
+  - font: inherit: Hereda la fuente del body o del elemento padre, para consistencia.
+  - box-sizing: border-box: Asegura que el padding y el border de los inputs
+                            también se incluyan en su tamaño total.
+*/
+input, button, textarea, select {
+  font: inherit; /* Hereda las propiedades de fuente del elemento padre */
+  /* Puedes añadir otros estilos básicos para formularios aquí si lo deseas,
+    como un padding ligero o un borde sutil:
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  */
+}
+
+/*
+  Enlaces:
+  - text-decoration: none: Elimina el subrayado predeterminado.
+  - color: inherit: Hereda el color del texto de su padre.
+*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+  Listas:
+  - list-style: none: Elimina las viñetas predeterminadas de las listas.
+*/
+ol, ul {
+  list-style: none;
+}
