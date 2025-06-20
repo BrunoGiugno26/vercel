@@ -2,16 +2,23 @@
 import { useAuthContext } from "@/context/authContext";
 import usePrivate from "@/hooks/usePrivate";
 import { routes } from "@/routes";
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { useEffect } from "react";
 
 const DataUser = () =>{
+    const router = useRouter()
     usePrivate();
     const { user } = useAuthContext();
 
-    if(!user){
-        location.href = routes.home;
-        return null
+    useEffect(() => {
+    if (!user) {
+        router.push(routes.home)
     }
+    }, [user,router]);
+
+if (!user) {
+    return null;
+}
     return(
         <>
         <h2 className="text-xl font-semibold mb-2">{user.name}</h2>
