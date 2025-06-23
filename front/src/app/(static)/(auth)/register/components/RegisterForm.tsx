@@ -44,12 +44,12 @@ const RegisterFormUI = () => {
     return (
         <Formik 
             initialValues={{
-                email: "bruno@gmail.com", // Cambia esto para cada prueba de registro
-                password: 'SecurePassword123',
-                confirmPassword: 'SecurePassword123', 
-                name: 'Bruno Giugno',
-                address: 'Calle Ficticia 456, Ciudad Ejemplo, País',
-                phone: '1234567890',
+                email: "", // Cambia esto para cada prueba de registro
+                password: '',
+                confirmPassword: '', 
+                name: '',
+                address: '',
+                phone: '',
             }}
 
             validationSchema={SignupSchema}

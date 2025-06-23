@@ -31,8 +31,8 @@ const LoginFormUI = () => {
     const { saveUserData } = useAuthContext(); 
 
     const [formData, setFormData] = useState<FormDataLogin>({
-        email: "bruno@gmail.com",
-        password: 'SecurePassword123',
+        email: "",
+        password: '',
     });
 
     const [fromErrors, setFormErrors] = useState<FormDataLogin>({
